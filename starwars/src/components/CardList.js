@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import Card from './Card';
+import SCard from './SCard';
+import styled from 'styled-components';
+
+const MainC = styled.div`
+background-color: lightgray;
+border-radius: 16px`
 
 function CardList (){
     const [cards, setCards] = useState([]);
@@ -19,15 +24,15 @@ function CardList (){
     }, []);
 
     return (
-        <div className = "container">
+        <MainC className = "container">
             <div className = "people">
                 {cards.map((card, index)=>{
                 return(
-                    <Card
+                    <SCard
                     key={index}
                     name={card.name}
-                    Birth Year={card.birth_year}
-                    Eye Color={card.eye_color}
+                    birth_year={card.birth_year}
+                    eye_color={card.eye_color}
                     gender={card.gender}
                     created={card.created}
                     />
@@ -35,7 +40,7 @@ function CardList (){
                 })
             }
             </div>
-        </div>
+        </MainC>
     )
 }
 
