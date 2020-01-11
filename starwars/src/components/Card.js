@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
 
-const Starbox= styled.div `
+const Starbox= styled.section `
 border: solid-black;
+text-align: center;
+margin: 50px;
 `
 
 const Card = props => {
