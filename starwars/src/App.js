@@ -1,5 +1,19 @@
 import React from 'react';
 import './App.css';
+import styled from 'styled-components';
+import CardList from "./components/CardList"
+
+const MainApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const Title=styled.h1`
+  color: #FFE81f;
+  font-size: 4.5rem;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -10,9 +24,10 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
-      <h1 className="Header">React Wars</h1>
-    </div>
+    <MainApp className="App">
+      <Title>React Wars</Title>
+      <CardList></CardList>
+    </MainApp>
   );
 }
 
